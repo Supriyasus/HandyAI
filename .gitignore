@@ -1,0 +1,33 @@
+# Ignore Python compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore Virtual Environment
+venv/
+finger2/
+.env
+
+# Ignore Logs & Cache
+*.log
+*.cache
+
+# Ignore Webstorm / JetBrains & VSCode files
+.idea/
+.vscode/
+
+# Ignore Media Files
+*.mp4
+*.avi
+*.mkv
+*.wav
+
+# Ignore Large Files
+*.zip
+*.tar.gz
+*.rar
+
+# Ignore Node.js dependencies (if using JavaScript)
+node_modules/
+package-lock.json

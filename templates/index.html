@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FingerBot Gesture Control</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" href="data:,">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-mono min-h-screen flex items-center justify-center p-4">
+
+    <div class="bg-white shadow-lg rounded-2xl p-8 max-w-4xl w-full text-center space-y-6">
+        <h1 class="text-3xl font-bold text-indigo-600">🖐️ FingerBot Gesture Control</h1>
+        <p class="text-gray-500">Use your camera to detect hand gestures with FingerBot.</p>
+    
+        <div class="flex flex-col lg:flex-row gap-6">
+            <!-- Video Section -->
+            <div class="w-full lg:w-3/4">
+                <button id="startCamera" class="w-full bg-green-500 text-white py-3 rounded-lg hover:bg-green-600 transition duration-300">
+                    Start Camera
+                </button>
+    
+                <video id="video" class="w-full mt-4 rounded-lg shadow-md hidden" autoplay></video>
+    
+                <button id="capture" class="w-full bg-indigo-500 text-white py-3 rounded-lg hover:bg-indigo-600 transition duration-300 hidden">
+                    Detect Gesture
+                </button>
+    
+                <!-- Gesture Result Display -->
+                <div id="result" class="text-lg text-gray-700 bg-gray-50 p-4 rounded-md shadow-inner mt-4">
+                    🤖 <strong>Gesture Result:</strong> <span id="gestureText">Waiting for input...</span>
+                </div>
+            </div>
+    
+            <!-- Gesture Info Section -->
+            <div class="w-full lg:w-1/4 bg-gray-50 p-4 rounded-lg shadow-md">
+                <h2 class="text-xl font-semibold text-gray-800">📋 Gesture Guide</h2>
+                <ul class="text-left text-gray-600 mt-4 space-y-2">
+                    <li>🖐️ <strong>5 Fingers:</strong> Fetch News</li>
+                    <li>✋ <strong>4 Fingers:</strong> Fetch Joke</li>
+                    <li>🤟 <strong>3 Fingers:</strong> Open YouTube</li>
+                    <li>✌️ <strong>2 Fingers:</strong> Fetch Live Weather</li>
+                    <li>☝️ <strong>1 Finger:</strong> Open ChatGPT</li>
+                </ul>
+            </div> 
+        </div>
+    </div>
+    
+    <canvas id="canvas" style="display:none;"></canvas>
+    <script src="/static/script.js"></script>
+</body>
+</html>

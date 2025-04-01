@@ -1,0 +1,12 @@
+opencv-python
+flask
+cvzone
+gunicorn
+mediapipe
+cvzone
+requests
+dotenv
+openmeteo-requests
+cache 
+pyttsx3
+retry
