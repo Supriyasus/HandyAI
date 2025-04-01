@@ -1,68 +1,70 @@
-<<<<<<< HEAD
-# HandyAI
-=======
-# FingerBot Gesture Control
+# HandyAI - Hand Gesture Recognition and Automation
 
-FingerBot is a web application that detects hand gestures using your webcam and triggers specific system actions based on the number of fingers shown.
+HandyAI is a web-based application that uses hand gesture recognition to trigger various actions. The system leverages computer vision and machine learning to detect hand gestures and perform predefined tasks. It also uses text-to-speech functionality to announce the actions it performs, making it an interactive and user-friendly application.
 
-## Features
+---
 
-Real-time hand gesture detection
+##  Features
 
-System actions triggered by specific gestures:
+- **Hand Gesture Recognition**: Detects various hand gestures using a webcam.
+- **Speech Output**: Announces the action being performed (e.g., "Opening YouTube").
+- **Automated Actions**: Based on hand gestures, the application can:
+  - Open websites
+  - Fetch weather updates
+  - Retrieve jokes
+  - Display news articles
+  - Perform other predefined tasks
+- **Interactive Web Interface**: Built using HTML, CSS, and JavaScript, with real-time webcam feed.
 
-5 Fingers: Opens Notepad
+---
 
-4 Fingers: Opens Camera
+## Requirements
 
-3 Fingers: Opens Command Prompt
+To run this project, you need the following dependencies:
 
-2 Fingers: Opens Microsoft Edge
+- Python 3.x
+- Flask
+- OpenCV
+- pyttsx3
+- cvzone
+- requests
+- dotenv (for managing environment variables)
+- News API (for fetching news articles)
 
-1 Finger: Opens Calendar
+---
 
-## Deployment
+## Installation
 
-The project is deployed on Render and accessible via [FingerBot on Render](https://fingerbot.onrender.com).
+### 1. Clone the Repository
+```bash
+git clone https://github.com/Supriyasus/HandyAI.git
+cd HandyAI
+```
+### 2. Install Dependencies
+Step 1: Create a Virtual Environment
+```bash
+python -m venv venv
+```
+Step 2: Activate the Virtual Environment
+```bash
+venv\Scripts\activate #windows
+source venv/bin/activate #macOS/Linux
+```
+Step 3: Install Required Python Packages
+```bash
+pip install -r requirements.txt
+```
 
-> Note: The deployed version will detect gestures, but system applications will not open unless the app is run locally due to server security restrictions.
-
-## Usage
-
-Open the application in your browser.
-
-Click on "Start Camera".
-
-Show a gesture with your fingers.
-
-Click "Detect Gesture" to trigger the corresponding action.
-
-## Technologies Used
-
-Python (Flask)
-
-OpenCV
-
-cvzone (HandTrackingModule)
-
-HTML, CSS (Tailwind), JavaScript
-
-## Setup (For Local Development)
-
-Clone the repository: 
-
-    git clone <repository-url>
-    cd Finger_Bot
-        
-Install dependencies:
-
-    pip install -r requirements.txt
-
-Run the Flask app:
-
-    python app.py
-
-Open http://localhost:5000 in your browser.
- 
-> Tip: Running locally allows the system commands (like opening apps) to work correctly.
->>>>>>> cb543f0 (First Commit)
+## Set Up API Keys
+- Sign up for the WeatherStack API (https://weatherstack.com/) and get   your API key.
+- Sign up for the NewsAPI (https://newsapi.org/) to get your News API key.
+- Add in .env file:
+```bash
+WEATHERSTACK_API_KEY=your_weatherstack_api_key
+NEWSAPI_KEY=your_newsapi_key
+```
+## Run the Application
+```bash
+python app.py
+```
+This will start the Flask server on http://localhost:5000/.

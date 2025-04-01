@@ -10,8 +10,6 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-import traceback
-
 @app.route('/detect', methods=['POST'])
 def detect():
     try:
