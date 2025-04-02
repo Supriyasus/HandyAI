@@ -2,7 +2,7 @@
 
 HandyAI is a web-based application that uses hand gesture recognition to trigger various actions. The system leverages computer vision and machine learning to detect hand gestures and perform predefined tasks. It also uses text-to-speech functionality to announce the actions it performs, making it an interactive and user-friendly application.
 
----
+Access the deployed website here: [HandyAI](https://handyai.onrender.com)
 
 ##  Features
 
