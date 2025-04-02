@@ -7,7 +7,7 @@ import pyttsx3
 
 def speak_action(message):
     """Function to handle speech in a separate thread."""
-    engine = pyttsx3.init(driverName="espeak")
+    engine = pyttsx3.init(driverName="espeak-ng")
     voices = engine.getProperty('voices')
     engine.setProperty('voice', voices[1].id)  # Female voice
     engine.setProperty('rate', 150)  # Adjust speech rate
