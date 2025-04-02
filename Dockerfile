@@ -1,18 +1,15 @@
 FROM python:3.11
 
-# Install system dependencies (including libGL for OpenCV)
-RUN apt-get update && apt-get install -y \
-    espeak \
-    libgl1-mesa-glx  # <-- This fixes the ImportError for OpenCV
+# Install system dependencies
+RUN apt-get update && apt-get install -y espeak alsa-utils
 
-# Set up a virtual environment
-RUN python -m venv /venv
-ENV PATH="/venv/bin:$PATH"
+# Set working directory (adjust if needed)
+WORKDIR /
 
-# Copy application files to root directory
-COPY . /
+# Copy your application files
+COPY . .
 
-# Install Python dependencies inside the virtual environment
+# Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Command to run your app
