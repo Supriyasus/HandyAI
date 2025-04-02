@@ -1,7 +1,8 @@
 FROM python:3.11
 
 # Install system dependencies
-RUN apt-get update && apt-get install -y espeak alsa-utils
+RUN apt-get update && apt-get install -y \
+    espeak alsa-utils libgl1 libglib2.0-0
 
 # Set working directory (adjust if needed)
 WORKDIR /
