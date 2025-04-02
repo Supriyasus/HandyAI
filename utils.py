@@ -5,9 +5,10 @@ from gestures.jokes import fetch_joke
 import threading
 import pyttsx3
 
+engine = pyttsx3.init(driverName="espeak")
+
 def speak_action(message):
     """Function to handle speech in a separate thread."""
-    engine = pyttsx3.init(driverName="espeak")
     voices = engine.getProperty('voices')
     engine.setProperty('voice', voices[1].id)  # Female voice
     engine.setProperty('rate', 150)  # Adjust speech rate
