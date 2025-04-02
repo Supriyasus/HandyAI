@@ -3,9 +3,6 @@ FROM python:3.11
 # Install system dependencies
 RUN apt-get update && apt-get install -y espeak
 
-# Set the working directory
-WORKDIR /app
-
 # Copy your application files
 COPY . .
 
