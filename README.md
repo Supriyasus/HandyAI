@@ -2,6 +2,7 @@
 
 HandyAI is a web-based application that uses hand gesture recognition to trigger various actions. The system leverages computer vision and machine learning to detect hand gestures and perform predefined tasks. It also uses text-to-speech functionality to announce the actions it performs, making it an interactive and user-friendly application.
 
+---
 
 ##  Features
 
@@ -62,6 +63,20 @@ pip install -r requirements.txt
 WEATHERSTACK_API_KEY=your_weatherstack_api_key
 NEWSAPI_KEY=your_newsapi_key
 ```
+## Dependencies
+Before running the project, ensure eSpeak is installed:
+
+For Linux
+```bash
+sudo apt-get update && sudo apt-get install -y espeak
+```
+For MacOS
+```bash
+brew install espeak
+```
+
+For Windows download and install eSpeak from [here](espeak.sourceforge.net).
+
 ## Run the Application
 ```bash
 python app.py
