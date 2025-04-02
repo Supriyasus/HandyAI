@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: handyai
+    env: docker
+    plan: free
+    repo: https://github.com/Supriyasus/HandyAI
+    region: oregon
+    branch: master
+    rootDir: /
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: PORT
+        value: 5000
