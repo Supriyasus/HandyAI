@@ -6,7 +6,7 @@ __pycache__/
 
 # Ignore Virtual Environment
 venv/
-finger2/
+finger/
 .env
 
 # Ignore Logs & Cache
@@ -31,3 +31,4 @@ finger2/
 # Ignore Node.js dependencies (if using JavaScript)
 node_modules/
 package-lock.json
+
